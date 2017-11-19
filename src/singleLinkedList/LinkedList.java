@@ -31,12 +31,12 @@ public class LinkedList {
 			return;
 		}
 		Node next = null;
-		Node first = head.node;
-		head.node = null;
+		Node first = head.getNode();
+		head.setNode(null); 
 		Node cur = head;
 		while(first!=null) {
-			next = first.node;
-			first.node = cur;
+			next = first.getNode();
+			first.setNode(cur);
 			cur = first;
 			first = next;
 		}
@@ -60,7 +60,7 @@ public class LinkedList {
 			while(count < position && cur!=null ) {
 				count++;
 				prev = cur;
-				cur = cur.node;
+				cur = cur.getNode();
 			}
 			if(cur ==null) {
 				System.out.println("worng insertion operation");
@@ -99,8 +99,8 @@ public class LinkedList {
 		if (head == null) {
 			System.out.println("null");
 		} else {
-			System.out.print(head.data + "-->");
-			display(head.node);
+			System.out.print(head.getData() + "-->");
+			display(head.getNode());
 		}
 
 	}
@@ -113,9 +113,9 @@ public class LinkedList {
 			return node;
 		} else {
 			Node cur = head;
-			while (cur.node != null) {
+			while (cur.getNode() != null) {
 				System.out.println("hh");
-				cur = cur.node;
+				cur = cur.getNode();
 			}
 			Node node = getNode();
 			node.setData(i);

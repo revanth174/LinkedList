@@ -2,8 +2,8 @@ package singleLinkedList;
 
 public class Node {
 	
-	protected int data;
-	protected Node node;
+	private int data;
+	private Node node;
 	
 	public Node() {
 		node = null;
