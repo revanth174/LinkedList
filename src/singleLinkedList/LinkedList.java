@@ -26,7 +26,7 @@ public class LinkedList {
 		reverse(head);
 	}
 	// print list in reverse order 
-	private static void reverse(Node head) {
+	public static void reverse(Node head) {
 		if(head == null) {
 			return;
 		}
@@ -45,7 +45,7 @@ public class LinkedList {
 	}
 
 	// add element at specified position
-	private static Node insertElementAtPos(int data, Node head, int position) {
+	public static Node insertElementAtPos(int data, Node head, int position) {
 		
 		if(position == 1) {
 			Node node = new Node();
@@ -78,7 +78,7 @@ public class LinkedList {
 	}
 
 	// add element at beginning
-	private static Node addElementAtFront(int value, Node head) {
+	public static Node addElementAtFront(int value, Node head) {
 
 		if (head == null) {
 			Node node = new Node();
@@ -94,7 +94,7 @@ public class LinkedList {
 	}
 
 	// print all nodes in linked list
-	private static void display(Node head) {
+	public static void display(Node head) {
 
 		if (head == null) {
 			System.out.println("null");
